@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/oauth-style.css">
+    <title>OAuth Homepage</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/auth/login">Login</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>OAuth Demo</h1>
+        <h2>Homepage</h2>
+    </header>
+    <main>
+        <% if (user == null || user == undefined) { %>
+            <p>No users logged in</p>
+        <%} else {%>
+            <p>Logged user :  <%= user.name.familyName %> <%= user.name.givenName %>.</p>
+        <% } %>
+    </main>
+</body>
+</html>
